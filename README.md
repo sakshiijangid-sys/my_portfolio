@@ -1,3 +1,4 @@
+ A high-end, professional portfolio designed to showcase the technical expertise and creative vision of a MERN Stack Developer.
 Focuses on aesthetic, utilizing clean grids, subtle noise textures, and smooth animations to create a premium digital experience.
 
 🛠️ Core Languages & Frameworks
