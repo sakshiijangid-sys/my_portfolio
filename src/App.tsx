@@ -10,8 +10,6 @@ import { useGSAP } from "@gsap/react";
 import { 
   Mail, 
   Linkedin, 
-  Phone, 
-  Github, 
   ExternalLink, 
   GraduationCap, 
   Code2, 
@@ -45,7 +43,7 @@ const UNPUBLISHED_PROJECTS = [
   {
     id: 2,
     name: "Crypto Dashboard",
-    mainImg: "https://images.unsplash.com/photo-1504868584819-f8e905263543?auto=format&fit=crop&q=80&w=500",
+    mainImg: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000",
     gallery: [
       "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800",
       "https://images.unsplash.com/photo-1621761191319-c6fb62004009?auto=format&fit=crop&q=80&w=800",
@@ -118,13 +116,7 @@ export default function App() {
       duration: 1,
       stagger: 0.2,
       ease: "power4.out",
-    })
-    .from(".hero-image", {
-      x: 100,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
-    }, "-=0.8");
+    });
 
     // Scroll Animations for Sections
     const sections = gsap.utils.toArray<HTMLElement>(".section-reveal-child");
@@ -201,7 +193,7 @@ export default function App() {
   }, { scope: containerRef, dependencies: [selectedProject] });
 
   return (
-    <div ref={containerRef} className="bg-[#FDFBF7] text-[#1A1A1A] font-sans selection:bg-[#966F33] selection:text-white">
+    <div ref={containerRef} className="bg-[#FDFBF7] text-[#1A1A1A] font-sans antialiased selection:bg-[#966F33] selection:text-white">
       {/* Scroll Progress Bar */}
       <div className="scroll-progress fixed top-0 left-0 w-full h-1 bg-[#966F33] origin-left scale-x-0 z-[100]" />
 
@@ -262,16 +254,41 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-20 overflow-hidden">
-        <div className="z-10 max-w-4xl">
-          <h2 className="hero-text text-[#966F33] text-lg font-bold tracking-widest uppercase mb-4">MERN Stack Developer</h2>
-          <h1 className="hero-text text-6xl md:text-9xl font-bold tracking-tighter leading-none mb-8">
-            Sakshi <br /> Jangid
-          </h1>
-          <p className="hero-text text-lg md:text-xl text-gray-600 max-w-lg mb-10 leading-relaxed">
+      <section className="relative pt-48 pb-32 px-6 md:px-20 overflow-hidden bg-[#FDFBF7]">
+        {/* Computer Aesthetic Background Layer */}
+        <div className="absolute inset-0 z-0 bg-grid-tech opacity-40" />
+        <div className="absolute inset-0 z-1 noise" />
+        <div className="absolute inset-0 z-2 vignette" />
+        
+        {/* Screen Corners Decoration */}
+        <div className="absolute top-10 left-10 w-4 h-4 border-t-2 border-l-2 border-[#966F33]/20 z-10" />
+        <div className="absolute top-10 right-10 w-4 h-4 border-t-2 border-r-2 border-[#966F33]/20 z-10" />
+        <div className="absolute bottom-10 left-10 w-4 h-4 border-b-2 border-l-2 border-[#966F33]/20 z-10" />
+        <div className="absolute bottom-10 right-10 w-4 h-4 border-b-2 border-r-2 border-[#966F33]/20 z-10" />
+
+        <div className="absolute inset-0 z-1 opacity-[0.03] pointer-events-none mix-blend-multiply">
+          <img 
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=2000" 
+            alt="Code Background" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <div className="scanline" />
+
+        <div className="z-10 max-w-4xl relative">
+          <div className="hero-text flex flex-col md:flex-row md:items-baseline md:gap-8 mb-6">
+            <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none">
+              Sakshi
+            </h1>
+            <h2 className="text-[#966F33] text-lg md:text-2xl font-bold tracking-widest uppercase">
+              MERN Stack Developer
+            </h2>
+          </div>
+          <p className="hero-text text-lg md:text-xl text-gray-600 max-w-lg mb-8 leading-relaxed">
             Crafting high-performance web applications with modern technologies and a focus on user experience.
           </p>
-          <div className="hero-text flex space-x-4 mb-12">
+          <div className="hero-text flex space-x-4">
             <a href="#projects" className="bg-[#1A1A1A] text-white px-8 py-4 rounded-full font-medium hover:bg-[#966F33] transition-all duration-300">
               View Projects
             </a>
@@ -281,69 +298,34 @@ export default function App() {
           </div>
         </div>
 
-        {/* Hero Illustration - Programming Focused */}
-        <div className="hero-image absolute right-0 top-0 w-full md:w-[55%] h-full pointer-events-none">
-          <div className="relative w-full h-full">
-            <img 
-              src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" 
-              alt="Programming Illustration" 
-              className="absolute right-0 bottom-0 h-full w-full object-cover opacity-40 mix-blend-multiply"
-              referrerPolicy="no-referrer"
-            />
-            {/* Gradient Overlay to blend illustration with the background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FDFBF7] via-[#FDFBF7]/70 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] via-transparent to-transparent" />
-            
-            {/* Decorative Technical Elements */}
-            <div className="absolute top-1/4 right-1/4 w-64 h-64 border border-[#966F33]/20 rounded-full animate-[spin_20s_linear_infinite]" />
-            <div className="absolute top-1/3 right-1/3 w-48 h-48 border border-[#966F33]/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-          </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer z-10">
           <ChevronDown className="text-gray-400" />
         </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="py-32 px-6 md:px-20 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-          <div>
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="h-[1px] w-12 bg-[#966F33]" />
-              <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">About Me</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
-              Passionate about building <br /> digital experiences.
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              I am a dedicated MERN Stack Developer with a strong foundation in building scalable and efficient web applications. My journey in technology is driven by a curiosity to solve complex problems and a commitment to delivering high-quality code.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With expertise in MongoDB, Express.js, React, and Node.js, I specialize in creating seamless full-stack solutions that combine robust backend logic with intuitive, responsive front-end designs.
-            </p>
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <div className="flex items-center space-x-4 mb-6">
+            <div className="h-[1px] w-12 bg-[#966F33]" />
+            <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">About Me</span>
+            <div className="h-[1px] w-12 bg-[#966F33]" />
           </div>
-          <div className="relative">
-            <div className="aspect-square bg-[#FDFBF7] rounded-2xl overflow-hidden border border-gray-100 shadow-2xl">
-               <img 
-                src="https://storage.googleapis.com/aistudio-build-assets/images/portfolio_user_image.png" 
-                alt="Sakshi Jangid Profile" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div className="absolute -bottom-10 -left-10 bg-[#966F33] text-white p-10 rounded-2xl hidden md:block">
-              <p className="text-4xl font-bold">2+</p>
-              <p className="text-sm uppercase tracking-widest font-medium">Years Experience</p>
-            </div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+            Passionate about building <br /> digital experiences.
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+            I am a dedicated MERN Stack Developer with a strong foundation in building scalable and efficient web applications. My journey in technology is driven by a curiosity to solve complex problems and a commitment to delivering high-quality code.
+          </p>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+            With expertise in MongoDB, Express.js, React, and Node.js, I specialize in creating seamless full-stack solutions that combine robust backend logic with intuitive, responsive front-end designs.
+          </p>
         </div>
       </section>
 
       {/* Education Section */}
       <section id="education" className="py-32 px-6 md:px-20 bg-white border-t border-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-black mb-16">Education Details</h2>
           <div className="flex items-center space-x-4 mb-12">
             <div className="h-[1px] w-12 bg-[#966F33]" />
             <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">Academic Background</span>
@@ -353,27 +335,24 @@ export default function App() {
             {[
               {
                 title: "Bachelor of Technology (B.Tech)",
-                institute: "YMCA University",
-                duration: "2020 - 2024",
+                institute: "J. C. Bose University of Science and Technology, YMCA",
+                duration: "2023 - 2027",
                 grade: "80%",
-                desc: "Specialized in Computer Science and Engineering. Focused on Data Structures, Algorithms, and Web Technologies.",
-                list: ["Data Structures & Algorithms", "Operating Systems", "Database Management Systems", "Cloud Computing"]
+                desc: "Specialized in Computer Science and Engineering. Focused on Data Structures, Algorithms, and Web Technologies."
               },
               {
-                title: "Higher Secondary Education (12th)",
-                institute: "GMSSS School",
-                duration: "2018 - 2020",
+                title: "Senior Secondary Education (12th)",
+                institute: "Govt. Model Sanskriti Sr. Sec. School",
+                duration: "2022 - 2023",
                 grade: "73%",
-                desc: "Science Stream (PCM). Developed a strong foundation in Mathematics and Physics.",
-                list: ["Physics", "Chemistry", "Mathematics", "Computer Science"]
+                desc: "Science Stream (PCM). Developed a strong foundation in Mathematics and Physics."
               },
               {
                 title: "Secondary Education (10th)",
-                institute: "AMSS School",
-                duration: "2017 - 2018",
+                institute: "Aggarwal Modern Sr. Sec. School",
+                duration: "2020 - 2021",
                 grade: "100%",
-                desc: "Excelled in all core subjects with a focus on logical reasoning and science.",
-                list: ["Mathematics", "Science", "Social Studies", "English"]
+                desc: "Excelled in all core subjects with a focus on logical reasoning and science."
               }
             ].map((edu, i) => (
               <div key={i} className="bg-white p-10 rounded-3xl border border-gray-300 shadow-xl transition-all duration-500">
@@ -387,15 +366,7 @@ export default function App() {
                     <p className="mt-3 font-black text-3xl text-[#966F33]">{edu.grade}</p>
                   </div>
                 </div>
-                <p className="text-xl text-gray-900 leading-relaxed max-w-4xl mb-8 font-medium">{edu.desc}</p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {edu.list.map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 rounded-full bg-[#966F33]" />
-                      <span className="text-lg text-gray-900 font-bold">{item}</span>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-xl text-gray-900 leading-relaxed max-w-4xl font-medium">{edu.desc}</p>
               </div>
             ))}
           </div>
@@ -418,10 +389,9 @@ export default function App() {
               </h3>
               <div className="flex flex-wrap gap-4">
                 {[
-                  "Communication", "Leadership", "Problem Solving", 
-                  "Time Management", "Adaptability", "Critical Thinking", 
-                  "Collaboration", "Emotional Intelligence", "Public Speaking",
-                  "Conflict Resolution", "Work Ethic", "Networking"
+                  "Creativity", "Communication", "Problem Solving", 
+                  "Time Management", "Adaptability", "Collaboration", 
+                  "Emotional Intelligence", "Work Ethic"
                 ].map((skill) => (
                   <span key={skill} className="px-6 py-3 bg-[#FDFBF7] border border-gray-200 rounded-full text-sm font-medium text-gray-800 hover:bg-[#966F33] hover:text-white transition-all cursor-default">
                     {skill}
@@ -440,8 +410,7 @@ export default function App() {
                   "HTML5", "CSS3", "TailwindCSS", "JavaScript", 
                   "React.js", "Node.js", "Express.js", "MongoDB", 
                   "TypeScript", "GSAP", "Git", "REST APIs",
-                  "Next.js", "Redux", "Firebase", "Docker",
-                  "AWS", "GraphQL"
+                  "Next.js", "Firebase", "GraphQL"
                 ].map((skill) => (
                   <span key={skill} className="px-6 py-3 bg-[#1A1A1A] text-white rounded-full text-sm font-medium hover:bg-[#966F33] transition-all cursor-default">
                     {skill}
@@ -463,12 +432,15 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Full Stack Web Development", org: "Meta Academy" },
-              { name: "Advanced React Patterns", org: "Frontend Masters" },
-              { name: "MongoDB Professional", org: "MongoDB University" },
-              { name: "UI/UX Design Essentials", org: "Adobe Creative" },
-              { name: "Node.js Backend Mastery", org: "Udemy Pro" },
-              { name: "Cloud Computing Fundamentals", org: "AWS Training" }
+              { name: "Training and Development", org: "IIT Kharagpur" },
+              { name: "Online communication in Digital age", org: "IIT Roorkee" },
+              { name: "Digital accessibility", org: "Indraprastha Institute of IT Delhi" },
+              { name: "Git for beginners", org: "Tutorialspoint" },
+              { name: "Website building with Wordpress", org: "Coursera" },
+              { name: "Generative AI introduction", org: "SFJ solutions pvt. Ltd." },
+              { name: "No code web development with Bubble.io", org: "Reliance Foundation" },
+              { name: "Front-end web development", org: "Reliance Foundation" },
+              { name: "Green skills passport", org: "Microsoft" }
             ].map((cert, i) => (
               <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-[#966F33] transition-all group">
                 <Award className="text-[#966F33] mb-6 group-hover:scale-110 transition-transform" size={40} />
@@ -502,7 +474,7 @@ export default function App() {
                 {
                   name: "TaskFlow Pro",
                   desc: "Real-time collaborative project management tool built with React, Socket.io, and Node.js.",
-                  img: "https://images.unsplash.com/photo-1454165833767-02a6e30aa46a?auto=format&fit=crop&q=80&w=1000",
+                  img: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=1000",
                   link: "/projects/taskflow"
                 },
                 {
@@ -583,30 +555,24 @@ export default function App() {
                 <a href="mailto:sakshijangid@gmail.com" className="flex items-center text-xl hover:text-[#966F33] transition-colors">
                   <Mail className="mr-4" /> sakshijangid@gmail.com
                 </a>
-                <p className="flex items-center text-xl">
-                  <Phone className="mr-4" /> +91 98765 43210
-                </p>
               </div>
             </div>
             <div className="flex flex-col justify-end items-start md:items-end">
               <div className="flex space-x-6 mb-10">
-                <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-[#966F33] transition-all">
+                <a 
+                  href="https://www.linkedin.com/in/sakshi-8b17732b4?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-white/5 rounded-full hover:bg-[#966F33] transition-all"
+                >
                   <Linkedin size={24} />
                 </a>
-                <a href="#" className="p-4 bg-white/5 rounded-full hover:bg-[#966F33] transition-all">
-                  <Github size={24} />
-                </a>
               </div>
-              <p className="text-gray-500 text-sm tracking-widest uppercase font-medium">Based in Rajasthan, India</p>
+              <p className="text-gray-500 text-sm tracking-widest uppercase font-medium">Based in Faridabad, Haryana</p>
             </div>
           </div>
           
           <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-            <p>© 2026 Sakshi Jangid. All rights reserved.</p>
-            <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            </div>
           </div>
         </div>
       </footer>
