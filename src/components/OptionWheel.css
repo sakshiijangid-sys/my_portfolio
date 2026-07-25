@@ -1,0 +1,55 @@
+.option-wheel {
+  --ow-text-color: #64748b;
+  --ow-active-color: #000000;
+  --ow-font-size: 1.6rem;
+  --ow-inset: 30px;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  outline: none;
+  background: transparent;
+}
+
+.option-wheel--dragging {
+  cursor: grabbing;
+}
+
+/* Each option is absolutely centered vertically, then offset along the curve */
+.option-wheel__item {
+  position: absolute;
+  top: 50%;
+  left: var(--ow-inset);
+  white-space: nowrap;
+  font-size: var(--ow-font-size);
+  line-height: 1.2;
+  font-family: inherit;
+  transform-origin: left center;
+  cursor: pointer;
+  will-change: transform, opacity, filter, color;
+  transition: color 0.15s ease, font-weight 0.15s ease;
+  letter-spacing: -0.01em;
+}
+
+.option-wheel--right .option-wheel__item {
+  left: auto;
+  right: var(--ow-inset);
+  transform-origin: right center;
+  text-align: right;
+}
+
+.option-wheel__item--selected {
+  font-weight: 700;
+  color: var(--ow-active-color);
+}
+
+@media (max-width: 768px) {
+  .option-wheel {
+    --ow-font-size: clamp(1.15rem, 4.5vw, 1.4rem) !important;
+    --ow-inset: 12px !important;
+  }
+}
