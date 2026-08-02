@@ -1,83 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <!-- Rich Velvet Maroon Gradient for Professional Depth -->
+    <!-- Deep Elegant Velvet Maroon Gradients -->
     <linearGradient id="maroonHexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8C2D40" />
-      <stop offset="60%" stop-color="#6B1D2F" />
+      <stop offset="50%" stop-color="#6B1D2F" />
       <stop offset="100%" stop-color="#4A101E" />
     </linearGradient>
 
-    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#A2334A" />
+    <linearGradient id="maroonHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B33852" />
       <stop offset="100%" stop-color="#6B1D2F" />
     </linearGradient>
 
-    <!-- Subtle Drop Shadow for Scaled Depth -->
-    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2D0B13" flood-opacity="0.35" />
+    <!-- Subtle Drop Shadow -->
+    <filter id="hexShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2D0B13" flood-opacity="0.3" />
     </filter>
   </defs>
 
-  <!-- Clean Off-White Background Container with Subtle Border -->
-  <rect x="16" y="16" width="480" height="480" rx="100" fill="#FDFBF7" stroke="#E2DCD2" stroke-width="4" />
+  <!-- Clean Warm Background Canvas -->
+  <rect x="20" y="20" width="472" height="472" rx="104" fill="#FDFBF7" stroke="#E5DFD5" stroke-width="4" />
 
-  <!-- GEOMETRIC ISOMETRIC 'SJ' MONOGRAM LOGO IN MAROON -->
-  <g filter="url(#logoShadow)" transform="translate(0, 0)">
+  <!-- ISOMETRIC HEXAGON 'SJ' LOGO IN RICH MAROON -->
+  <g filter="url(#hexShadow)">
     
-    <!-- LETTER 'S' - UPPER & MIDDLE GEOMETRIC HEXAGONAL BAND -->
-    <!-- Top-Left to Top-Right Outer Bar of S -->
+    <!-- LETTER 'S' (Pillar & Slanted Parallel Hexagonal Bands) -->
+    <!-- S Top Bar & Upper Loop -->
     <path 
-      d="M 160 180 
-         L 256 125 
-         L 330 168 
-         L 282 195 
-         L 256 180 
-         L 208 208 
-         L 346 288 
-         L 346 198 
-         L 394 170 
-         L 394 316 
-         L 256 396 
-         L 160 340 
-         L 208 312 
-         L 256 340 
-         L 298 316 
-         L 160 236 
+      d="M 120 180 
+         L 256 102 
+         L 326 142 
+         L 276 171 
+         L 256 160 
+         L 170 210 
+         L 170 262 
+         L 326 172 
+         L 326 288 
+         L 256 328 
+         L 206 299 
+         L 256 270 
+         L 276 282 
+         L 276 220 
+         L 120 310 
          Z" 
       fill="url(#maroonHexGrad)" 
     />
 
-    <!-- Top Cap of Letter S -->
+    <!-- S Top Roof Facet (3D Top Accent) -->
     <path 
-      d="M 160 180 
-         L 256 125 
-         L 352 180 
-         L 304 208 
-         L 256 180 
-         L 208 208 
-         L 160 180 Z" 
-      fill="url(#accentGlow)" 
-    />
-
-    <!-- LETTER 'J' - RIGHT VERTICAL DOT & BOTTOM HOOK -->
-    <!-- Top Right Accent Square of 'J' -->
-    <path 
-      d="M 370 184 
-         L 418 212 
-         L 418 268 
-         L 370 240 
+      d="M 120 180 
+         L 256 102 
+         L 326 142 
+         L 276 171 
+         L 256 160 
+         L 170 210 
          Z" 
-      fill="url(#maroonHexGrad)" 
+      fill="url(#maroonHighlight)" 
+      opacity="0.95"
     />
 
-    <!-- Main Lower Hook of 'J' -->
+    <!-- LETTER 'J' (Dot Block & Bottom Isometric Slant Hook) -->
+    <!-- J Top-Right Diamond/Square Dot -->
     <path 
-      d="M 370 270 
-         L 418 298 
-         L 418 344 
-         L 256 438 
-         L 208 410 
-         L 370 316 
+      d="M 356 159 
+         L 406 188 
+         L 406 238 
+         L 356 209 
+         Z" 
+      fill="url(#maroonHighlight)" 
+    />
+
+    <!-- J Vertical Stem & Bottom Isometric Sweep -->
+    <path 
+      d="M 356 228 
+         L 406 257 
+         L 406 332 
+         L 256 418 
+         L 206 389 
+         L 356 303 
          Z" 
       fill="url(#maroonHexGrad)" 
     />
