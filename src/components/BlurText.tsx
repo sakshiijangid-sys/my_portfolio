@@ -44,7 +44,17 @@ export const BlurText: React.FC<BlurTextProps> = ({
   as: Component = 'p',
   getWordClassName
 }) => {
-  const elements = animateBy === 'words' ? text.split(' ') : text.split('');
+  const elements = useMemo(() => {
+    if (animateBy === 'letters') return text.split('');
+    const parts: string[] = [];
+    const lines = text.split('\n');
+    lines.forEach((line, i) => {
+      if (i > 0) parts.push('\n');
+      const words = line.split(' ').filter(Boolean);
+      parts.push(...words);
+    });
+    return parts;
+  }, [text, animateBy]);
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLParagraphElement>(null);
 
@@ -91,6 +101,10 @@ export const BlurText: React.FC<BlurTextProps> = ({
   return (
     <Component ref={ref as any} className={className} style={{ display: 'flex', flexWrap: 'wrap' }}>
       {elements.map((segment, index) => {
+        if (segment === '\n') {
+          return <span key={`br-${index}`} className="w-full basis-full h-0 block" />;
+        }
+
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
         const spanTransition: Record<string, any> = {

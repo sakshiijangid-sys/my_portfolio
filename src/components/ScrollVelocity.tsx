@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState, ReactNode, RefObject, CSSProperties, PointerEvent } from 'react';
+import { useRef, useLayoutEffect, useState, useEffect, ReactNode, RefObject, CSSProperties, PointerEvent } from 'react';
 import {
   motion,
   useScroll,
@@ -74,12 +74,41 @@ function VelocityText({
     { clamp: false }
   );
 
+  const containerRef = useRef<HTMLDivElement>(null);
   const copyRef = useRef<HTMLSpanElement>(null);
   const copyWidth = useElementWidth(copyRef);
 
   const isDraggingRef = useRef(false);
   const [isDraggingState, setIsDraggingState] = useState(false);
   const lastPointerXRef = useRef(0);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const onWheel = (e: WheelEvent) => {
+      const deltaX = e.deltaX;
+      const deltaY = e.deltaY;
+
+      let delta = 0;
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        delta = deltaX;
+      } else if (e.shiftKey) {
+        delta = deltaY;
+      } else if (Math.abs(deltaY) > 0) {
+        delta = deltaY * 0.5;
+      }
+
+      if (delta !== 0) {
+        baseX.set(baseX.get() - delta * 0.8);
+      }
+    };
+
+    el.addEventListener('wheel', onWheel, { passive: true });
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+    };
+  }, [baseX]);
 
   function wrap(min: number, max: number, v: number) {
     const range = max - min;
@@ -147,8 +176,9 @@ function VelocityText({
 
   return (
     <div
+      ref={containerRef}
       className={`${parallaxClassName} select-none ${draggable ? (isDraggingState ? 'cursor-grabbing' : 'cursor-grab') : ''}`}
-      style={parallaxStyle}
+      style={{ touchAction: 'pan-y', ...parallaxStyle }}
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Velvet Maroon Gradients -->
+    <linearGradient id="maroonKnot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8C2D40" />
+      <stop offset="50%" stop-color="#6B1D2F" />
+      <stop offset="100%" stop-color="#420D1A" />
+    </linearGradient>
+
+    <linearGradient id="loopLeftMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A2334A" />
+      <stop offset="35%" stop-color="#6B1D2F" />
+      <stop offset="85%" stop-color="#420D1A" />
+      <stop offset="100%" stop-color="#2D0711" />
+    </linearGradient>
+
+    <linearGradient id="loopRightMain" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A2334A" />
+      <stop offset="35%" stop-color="#6B1D2F" />
+      <stop offset="85%" stop-color="#420D1A" />
+      <stop offset="100%" stop-color="#2D0711" />
+    </linearGradient>
+
+    <linearGradient id="loopBackLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B1D2F" />
+      <stop offset="60%" stop-color="#3D0B17" />
+      <stop offset="100%" stop-color="#25040C" />
+    </linearGradient>
+
+    <linearGradient id="loopBackRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6B1D2F" />
+      <stop offset="60%" stop-color="#3D0B17" />
+      <stop offset="100%" stop-color="#25040C" />
+    </linearGradient>
+
+    <linearGradient id="tailLeft" x1="30%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7D2336" />
+      <stop offset="40%" stop-color="#6B1D2F" />
+      <stop offset="80%" stop-color="#420D1A" />
+      <stop offset="100%" stop-color="#28050D" />
+    </linearGradient>
+
+    <linearGradient id="tailRight" x1="70%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7D2336" />
+      <stop offset="40%" stop-color="#6B1D2F" />
+      <stop offset="80%" stop-color="#420D1A" />
+      <stop offset="100%" stop-color="#28050D" />
+    </linearGradient>
+
+    <linearGradient id="satinHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C24E65" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#8C2D40" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="subtleDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1A0208" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g filter="url(#subtleDropShadow)">
+    <!-- BACK / SECONDARY LOOPS (DOUBLED BOW EFFECT) -->
+    <!-- Back Left Loop -->
+    <path d="M 230 185 C 150 100 40 120 30 220 C 20 310 130 310 225 210 Z" fill="url(#loopBackLeft)" />
+    <path d="M 228 190 C 155 115 50 135 42 220 C 35 295 130 295 220 210 Z" fill="none" stroke="#8C2D40" stroke-width="3" opacity="0.4" />
+
+    <!-- Back Right Loop -->
+    <path d="M 282 185 C 362 100 472 120 482 220 C 492 310 382 310 287 210 Z" fill="url(#loopBackRight)" />
+    <path d="M 284 190 C 357 115 462 135 470 220 C 477 295 382 295 292 210 Z" fill="none" stroke="#8C2D40" stroke-width="3" opacity="0.4" />
+
+    <!-- RIBBON TAILS -->
+    <!-- Left Tail -->
+    <path d="M 225 210 C 210 270 160 380 120 470 L 220 425 C 235 360 245 280 250 215 Z" fill="url(#tailLeft)" />
+    <path d="M 225 210 C 210 270 160 380 120 470 L 132 465 C 170 380 215 275 228 212 Z" fill="url(#satinHighlight)" />
+
+    <!-- Right Tail -->
+    <path d="M 287 210 C 302 270 352 380 392 470 L 292 425 C 277 360 267 280 262 215 Z" fill="url(#tailRight)" />
+    <path d="M 287 210 C 302 270 352 380 392 470 L 380 465 C 342 380 297 275 284 212 Z" fill="url(#satinHighlight)" />
+
+    <!-- FRONT MAIN LOOPS -->
+    <!-- Front Left Loop -->
+    <path d="M 235 180 C 170 80 70 100 75 195 C 80 270 180 235 240 205 Z" fill="url(#loopLeftMain)" />
+    <!-- Inner fold/shadow for Left Loop -->
+    <path d="M 235 180 C 180 110 95 125 95 185 C 95 235 175 215 238 202 Z" fill="#380814" opacity="0.6" />
+    <path d="M 235 180 C 170 80 70 100 75 195" fill="none" stroke="#C24E65" stroke-width="4" opacity="0.5" />
+
+    <!-- Front Right Loop -->
+    <path d="M 277 180 C 342 80 442 100 437 195 C 432 270 332 235 272 205 Z" fill="url(#loopRightMain)" />
+    <!-- Inner fold/shadow for Right Loop -->
+    <path d="M 277 180 C 332 110 417 125 417 185 C 417 235 337 215 274 202 Z" fill="#380814" opacity="0.6" />
+    <path d="M 277 180 C 342 80 442 100 437 195" fill="none" stroke="#C24E65" stroke-width="4" opacity="0.5" />
+
+    <!-- KNOT IN CENTER -->
+    <g>
+      <!-- Center Knot Shadow -->
+      <rect x="220" y="165" width="72" height="54" rx="14" fill="#20030A" />
+      <!-- Center Knot Main -->
+      <rect x="222" y="163" width="68" height="52" rx="12" fill="url(#maroonKnot)" />
+      <!-- Velvet Texture/Highlight Lines on Knot -->
+      <path d="M 234 163 Q 238 189 234 215" fill="none" stroke="#C24E65" stroke-width="3" opacity="0.5" />
+      <path d="M 256 163 Q 258 189 256 215" fill="none" stroke="#D1637A" stroke-width="4" opacity="0.6" />
+      <path d="M 278 163 Q 274 189 278 215" fill="none" stroke="#3D0B17" stroke-width="3" opacity="0.7" />
+    </g>
+  </g>
+</svg>

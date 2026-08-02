@@ -437,7 +437,7 @@ export default function App() {
         />
         {/* Desktop Header Nav */}
         <nav className="hidden md:flex relative z-20 pointer-events-auto px-6 py-5 justify-between items-center text-slate-900 bg-white/75 backdrop-blur-md border-b border-slate-900/10 shadow-sm transition-all">
-          <div className="text-xl font-extrabold tracking-tighter text-slate-900">SAKSHI JANGID</div>
+          <div className="text-xl font-extrabold tracking-tighter text-slate-900">SAKSHI</div>
           
           {/* Desktop Navigation Links */}
           <div className="flex space-x-8 text-sm font-semibold uppercase tracking-widest text-slate-800">
@@ -503,7 +503,7 @@ export default function App() {
                 ariaLabel: 'Send Interview Invite',
                 onClick: () => setShowInviteModal(true),
                 rotation: -4,
-                hoverStyles: { bgColor: '#966F33', textColor: '#ffffff' }
+                hoverStyles: { bgColor: '#6B1D2F', textColor: '#ffffff' }
               }
             ]}
             menuBg="#FDFBF7"
@@ -522,25 +522,25 @@ export default function App() {
         <div className="absolute inset-0 z-2 vignette" />
         
         {/* Screen Corners Decoration */}
-        <div className="absolute top-10 left-10 w-4 h-4 border-t-2 border-l-2 border-[#966F33]/20 z-10" />
-        <div className="absolute top-10 right-10 w-4 h-4 border-t-2 border-r-2 border-[#966F33]/20 z-10" />
-        <div className="absolute bottom-10 left-10 w-4 h-4 border-b-2 border-l-2 border-[#966F33]/20 z-10" />
-        <div className="absolute bottom-10 right-10 w-4 h-4 border-b-2 border-r-2 border-[#966F33]/20 z-10" />
+        <div className="absolute top-10 left-10 w-4 h-4 border-t-2 border-l-2 border-[#6B1D2F]/30 z-10" />
+        <div className="absolute top-10 right-10 w-4 h-4 border-t-2 border-r-2 border-[#6B1D2F]/30 z-10" />
+        <div className="absolute bottom-10 left-10 w-4 h-4 border-b-2 border-l-2 border-[#6B1D2F]/30 z-10" />
+        <div className="absolute bottom-10 right-10 w-4 h-4 border-b-2 border-r-2 border-[#6B1D2F]/30 z-10" />
 
         <div className="z-10 max-w-5xl relative">
           <BlurText
             as="h1"
-            text="I am a full-stack developer helping Tech Leads who need to move fast without breaking things."
+            text={"Hi I'm Sakshi\nAs a creative web developer and artist, I bring thoughtful visual care to reliable code that works for tech leads without breaking things."}
             delay={80}
             animateBy="words"
             direction="top"
             stepDuration={0.35}
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-8 text-black"
-            getWordClassName={(_word, index, total) => index >= total - 5 ? 'text-[#966F33]' : ''}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-snug sm:leading-tight mb-8 text-[#1C1917]"
+            getWordClassName={(_word, index, total) => index >= total - 5 ? 'text-[#8C2D40]' : ''}
           />
 
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mb-10 leading-relaxed font-normal">
-            I don't just prompt AI — I understand, debug, and refine AI-generated code to deliver robust MERN applications at accelerated velocity. Hiring me means getting full-stack feature delivery without the traditional ramp-up delay.
+          <p className="text-lg md:text-xl text-stone-700 max-w-3xl mb-10 leading-relaxed font-normal">
+            I don't just prompt AI - I understand, debug, and refine AI-generated code. Hiring me means getting full-stack feature delivery without the traditional ramp-up delay.        Let's build something good together — reach out anytime.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -552,7 +552,7 @@ export default function App() {
               tintOpacity={1}
               textColor="#ffffff"
               lineColor="#ffffff"
-              baseColor="#966F33"
+              baseColor="#6B1D2F"
               intensity={1.2}
               className="font-bold shadow-xl"
             >
@@ -561,7 +561,7 @@ export default function App() {
             </SpecularButton>
             <a 
               href="#projects" 
-              className="border border-[#1A1A1A] px-8 py-4 rounded-full font-bold hover:bg-[#1A1A1A] hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
+              className="border border-[#1A1A1A] px-8 py-4 rounded-full font-bold hover:bg-[#1A1A1A] hover:text-white transition-all duration-300 flex items-center justify-center space-x-2 text-[#1C1917]"
             >
               <span>Inspect Shipped Work</span>
               <ArrowRight size={18} />
@@ -569,39 +569,37 @@ export default function App() {
           </div>
 
           {/* Value Badges */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-gray-200/60">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-stone-200">
             <div className="flex items-start space-x-3">
-              <Zap className="text-[#966F33] shrink-0 mt-1" size={20} />
+              <Zap className="text-[#E07A5F] shrink-0 mt-1" size={20} />
               <div>
-                <h4 className="font-bold text-sm text-black">10x Prototyping Velocity</h4>
-                <p className="text-xs text-gray-600">From concept to functional code in hours, not weeks.</p>
+                <h4 className="font-bold text-sm text-[#1C1917]">10x Prototyping Velocity</h4>
+                <p className="text-xs text-stone-600">From concept to functional code in hours, not weeks.</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <ShieldCheck className="text-[#966F33] shrink-0 mt-1" size={20} />
+              <ShieldCheck className="text-[#E07A5F] shrink-0 mt-1" size={20} />
               <div>
-                <h4 className="font-bold text-sm text-black">Deep Code Auditing</h4>
-                <p className="text-xs text-gray-600">Comprehending & refactoring AI output for production safety.</p>
+                <h4 className="font-bold text-sm text-[#1C1917]">Deep Code Auditing</h4>
+                <p className="text-xs text-stone-600">Comprehending & refactoring AI output for production safety.</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <Terminal className="text-[#966F33] shrink-0 mt-1" size={20} />
+              <Terminal className="text-[#E07A5F] shrink-0 mt-1" size={20} />
               <div>
-                <h4 className="font-bold text-sm text-black">Full-Stack Autonomy</h4>
-                <p className="text-xs text-gray-600">MERN, TypeScript, REST APIs, and UI engineering.</p>
+                <h4 className="font-bold text-sm text-[#1C1917]">Full-Stack Autonomy</h4>
+                <p className="text-xs text-stone-600">MERN, TypeScript, REST APIs, and UI engineering.</p>
               </div>
             </div>
           </div>
         </div>
-
-
       </section>
 
       {/* The Proof Section: 2 Subsections (UI Enhancements & Code Audit Diff) */}
       <section id="proof" className="py-24 px-6 md:px-20 bg-[#0F172A] text-white border-y border-gray-800 relative overflow-hidden">
         {/* Background glow effects */}
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#966F33]/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#6B1D2F]/25 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-rose-950/30 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Main Proof Section Header */}
@@ -610,8 +608,8 @@ export default function App() {
               <TrueFocus 
                 sentence="AI Speed + | Human Engineering" 
                 separator=" | "
-                borderColor="#966F33" 
-                glowColor="rgba(150, 111, 51, 0.6)" 
+                borderColor="#E07A5F" 
+                glowColor="rgba(224, 122, 95, 0.5)" 
                 animationDuration={0.5} 
                 pauseBetweenAnimations={1} 
               />
@@ -622,7 +620,7 @@ export default function App() {
           </div>
 
           {/* SUBSECTION 1: UI & LAYOUT ENHANCEMENTS */}
-          <div className="mb-24 pb-16 border-b border-slate-800">
+          <div>
             <div className="text-center max-w-2xl mx-auto mb-10">
               <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-3">
                 UI & Layout Enhancements
@@ -640,31 +638,31 @@ export default function App() {
                   badge: "Data Density & Clean Hierarchy",
                   img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
                   rawAi: "Overcrowded chart dump with raw unformatted numbers, zero visual contrast, and unaligned metric cards.",
-                  sakshiRefactor: "Structured grid layout with distinct typographic hierarchy, clear KPI focus cards, and responsive chart containers."
+                  myRefactor: "Structured grid layout with distinct typographic hierarchy, clear KPI focus cards, and responsive chart containers."
                 },
                 {
                   title: "SaaS Billing & Pricing Engine",
                   badge: "Conversion & Micro-Interactions",
                   img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
                   rawAi: "Static pricing table with wrapped button labels and rigid uncentered column heights.",
-                  sakshiRefactor: "Interactive billing toggle, highlighted value plan, mathematical border-radius, and seamless checkout state transitions."
+                  myRefactor: "Interactive billing toggle, highlighted value plan, mathematical border-radius, and seamless checkout state transitions."
                 },
                 {
                   title: "Mobile-First App Onboarding Flow",
                   badge: "Fluid Touch Targets & UX",
                   img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000",
                   rawAi: "Desktop-first fixed width layout causing horizontal scrolling and sub-44px touch targets on mobile screens.",
-                  sakshiRefactor: "Adaptive mobile viewport layout, 48px+ touch targets, smooth slide transitions, and clear progress steppers."
+                  myRefactor: "Adaptive mobile viewport layout, 48px+ touch targets, smooth slide transitions, and clear progress steppers."
                 },
                 {
                   title: "Dark Luxury Portfolio Interface",
                   badge: "Typography & Micro-Contrast",
                   img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000",
                   rawAi: "Aggressive neon gradients on pure black (#000000) with poor WCAG contrast ratios and clipped text.",
-                  sakshiRefactor: "Sophisticated deep slate palette (#0F172A), balanced warm neutral highlights, and fluid display typography."
+                  myRefactor: "Sophisticated deep slate palette (#0F172A), balanced warm neutral highlights, and fluid display typography."
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 overflow-hidden hover:border-[#966F33]/60 transition-all duration-300 group shadow-lg">
+                <div key={idx} className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 overflow-hidden hover:border-[#E07A5F]/60 transition-all duration-300 group shadow-lg">
                   <div className="relative aspect-video rounded-2xl overflow-hidden mb-6 border border-slate-800">
                     <img 
                       src={item.img} 
@@ -672,7 +670,7 @@ export default function App() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md border border-slate-800 text-[#E5C185] px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">
+                    <div className="absolute top-3 left-3 bg-slate-950/90 backdrop-blur-md border border-slate-800 text-[#E07A5F] px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider">
                       {item.badge}
                     </div>
                   </div>
@@ -686,134 +684,11 @@ export default function App() {
                     </div>
                     <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-900/60 text-emerald-200">
                       <span className="font-bold uppercase text-[10px] text-emerald-400 block mb-0.5">My Enhanced UI:</span>
-                      {item.sakshiRefactor}
+                      {item.myRefactor}
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* SUBSECTION 2: RAW CODE VS AUDITED CODE DIFF VIEWER */}
-          <div>
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <h3 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-3">
-                Raw AI Code vs. My Audited Code
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Interactive code diff inspector comparing raw AI drafts against production-safe TypeScript refactors.
-              </p>
-            </div>
-
-            {/* Scenario Selection Tabs */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              {CODE_SCENARIOS.map((scenario, idx) => {
-                const Icon = scenario.icon;
-                const isActive = activeScenarioIdx === idx;
-                return (
-                  <button
-                    key={scenario.id}
-                    onClick={() => setActiveScenarioIdx(idx)}
-                    className={`p-5 rounded-2xl text-left border transition-all duration-300 flex flex-col justify-between ${
-                      isActive
-                        ? "bg-slate-800 border-[#966F33] ring-2 ring-[#966F33]/30 shadow-xl"
-                        : "bg-slate-900/60 border-slate-800 hover:border-slate-700 hover:bg-slate-800/50"
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3 mb-2">
-                      <div className={`p-2 rounded-lg ${isActive ? "bg-[#966F33] text-white" : "bg-slate-800 text-gray-400"}`}>
-                        <Icon size={18} />
-                      </div>
-                      <h4 className={`font-bold text-sm ${isActive ? "text-white" : "text-gray-300"}`}>
-                        {scenario.title}
-                      </h4>
-                    </div>
-                    <p className="text-xs text-gray-400 leading-relaxed">
-                      {scenario.summary}
-                    </p>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Code Viewer Container */}
-            <div className="bg-slate-950 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl mb-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-800">
-                {/* Raw AI Panel */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-                      <span className="text-xs font-mono font-bold uppercase text-rose-400 tracking-wider">
-                        Unfiltered Raw AI Output
-                      </span>
-                    </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-rose-950/80 border border-rose-800 text-rose-300 text-[10px] font-mono uppercase font-semibold">
-                      Needs Audit
-                    </span>
-                  </div>
-                  <pre className="font-mono text-xs text-rose-200/90 leading-relaxed overflow-x-auto p-4 bg-slate-900/80 rounded-xl border border-rose-950">
-                    <code>{CODE_SCENARIOS[activeScenarioIdx].rawAi}</code>
-                  </pre>
-                </div>
-
-                {/* Audited Code Panel */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                      <span className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">
-                        Sakshi's Audited Production Refactor
-                      </span>
-                    </div>
-                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-[10px] font-mono uppercase font-semibold">
-                      Production Ready
-                    </span>
-                  </div>
-                  <pre className="font-mono text-xs text-emerald-200/90 leading-relaxed overflow-x-auto p-4 bg-slate-900/80 rounded-xl border border-emerald-950">
-                    <code>{CODE_SCENARIOS[activeScenarioIdx].audited}</code>
-                  </pre>
-                </div>
-              </div>
-            </div>
-
-            {/* Key Improvements Breakdown */}
-            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 md:p-8">
-              <h4 className="text-sm font-bold uppercase tracking-wider text-[#E5C185] mb-4 flex items-center">
-                <Zap size={16} className="mr-2 text-[#966F33]" />
-                Architectural Enhancements Applied in Scenario #{activeScenarioIdx + 1}
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {CODE_SCENARIOS[activeScenarioIdx].fixes.map((fix, idx) => (
-                  <div key={idx} className="flex items-start space-x-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
-                    <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <p className="text-xs text-gray-300 leading-relaxed">{fix}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-left">
-                  <p className="text-xs text-gray-400 font-mono">
-                    PRODUCING FAST RESULTS + MAINTAINING HIGH STANDARDS = STARTUP SUCCESS
-                  </p>
-                </div>
-                <SpecularButton
-                  onClick={() => setShowInviteModal(true)}
-                  size="md"
-                  radius={9999}
-                  tint="#966F33"
-                  tintOpacity={1}
-                  textColor="#ffffff"
-                  lineColor="#ffffff"
-                  baseColor="#725324"
-                  intensity={1.2}
-                  className="text-xs font-bold uppercase tracking-wider shadow-lg shrink-0"
-                >
-                  <Mail size={16} />
-                  <span>Invite to Technical Interview</span>
-                </SpecularButton>
-              </div>
             </div>
           </div>
         </div>
@@ -823,14 +698,14 @@ export default function App() {
       <section id="projects" className="py-32 px-6 md:px-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center space-x-4 mb-4">
-            <div className="h-[1px] w-12 bg-[#966F33]" />
-            <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">Proof of Shipment</span>
+            <div className="h-[1px] w-12 bg-[#6B1D2F]" />
+            <span className="text-[#8C2D40] font-bold uppercase tracking-widest text-lg">Proof of Shipment</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#1C1917]">
             Published Projects
           </h2>
-          <p className="text-gray-600 text-lg mb-16 max-w-2xl">
+          <p className="text-stone-600 text-lg mb-16 max-w-2xl">
             Each project demonstrates functional completeness, clean architecture, and rapid deployment readiness.
           </p>
 
@@ -838,39 +713,39 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             {[
               {
-                name: "Eco-Commerce Platform",
-                desc: "A full-featured MERN stack e-commerce application with Stripe payment processing, admin state dashboard, and RESTful product API.",
-                img: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
-                link: "/projects/eco-commerce",
-                velocity: "Shipped in 48 hrs",
-                stack: ["React", "Node.js", "Express", "MongoDB", "Stripe"]
+                name: "Inspirova (Artist Discovery)",
+                desc: "Pinterest-style social platform for artists to discover drawing and sketching reference art with MERN stack & Masonry feed.",
+                img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1000",
+                link: "#projects",
+                velocity: "Shipped & Audited",
+                stack: ["React", "MongoDB", "Express", "Masonry"]
               },
               {
-                name: "TaskFlow Pro",
-                desc: "Real-time collaborative project management workspace built with React, Socket.io, and Node.js for instant team synchronization.",
+                name: "Solo Leveling System",
+                desc: "Gamified learning system with an AI chatbot powered by Gemini API, dual manual/AI task scheduling, and Firebase Firestore persistence.",
+                img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=1000",
+                link: "#projects",
+                velocity: "Shipped & Audited",
+                stack: ["Gemini API", "Firebase", "React", "TailwindCSS"]
+              },
+              {
+                name: "Taskify (Todo Case Study)",
+                desc: "Full-stack task management web application with user authentication and persistent cloud storage, built to overcome client-side state wipe on page refresh.",
                 img: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=1000",
-                link: "/projects/taskflow",
-                velocity: "Shipped in 36 hrs",
-                stack: ["React", "Socket.io", "Node.js", "TailwindCSS"]
+                link: "#projects",
+                velocity: "Shipped & Audited",
+                stack: ["React", "Firebase Firestore", "Firebase Auth", "TailwindCSS"]
               },
               {
-                name: "Nexus Social Media",
-                desc: "Full-stack social networking application with user authentication, media upload, feed generation, and responsive UI.",
-                img: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
-                link: "/projects/nexus",
-                velocity: "Shipped in 3 days",
-                stack: ["React", "Express.js", "MongoDB", "JWT Auth"]
-              },
-              {
-                name: "Zenith Portfolio & Workspace",
-                desc: "High-performance creative portfolio engine built with GSAP scroll animations, clean layouts, and responsive components.",
-                img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000",
-                link: "/projects/zenith",
-                velocity: "Shipped in 24 hrs",
-                stack: ["React", "TypeScript", "GSAP", "Tailwind"]
+                name: "Full-Stack E-Commerce Store",
+                desc: "Custom storefront with Supabase database storage, brand identity design in Figma, and integrated UPI online payment gateway.",
+                img: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
+                link: "#projects",
+                velocity: "Shipped & Audited",
+                stack: ["React", "Supabase", "UPI Gateway", "Figma"]
               }
             ].map((project, i) => (
-              <div key={i} className="section-reveal project-card group bg-[#FDFBF7] p-6 rounded-3xl border border-gray-200/80 shadow-md hover:shadow-xl transition-all">
+              <div key={i} className="section-reveal project-card group bg-[#FDFBF7] p-6 rounded-3xl border border-stone-200/80 shadow-md hover:shadow-xl transition-all">
                 <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
                   <img 
                     src={project.img} 
@@ -878,21 +753,21 @@ export default function App() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
-                    <Zap size={12} className="text-[#966F33]" />
+                  <div className="absolute top-4 right-4 bg-stone-900/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
+                    <Zap size={12} className="text-[#E07A5F]" />
                     <span>{project.velocity}</span>
                   </div>
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <a href={project.link} className="bg-white text-black p-4 rounded-full hover:bg-[#966F33] hover:text-white transition-colors">
+                    <a href={project.link} className="bg-white text-[#1C1917] p-4 rounded-full hover:bg-[#6B1D2F] hover:text-white transition-colors">
                       <ExternalLink size={24} />
                     </a>
                   </div>
                 </div>
-                <h4 className="text-2xl font-bold mb-2">{project.name}</h4>
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{project.desc}</p>
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-200">
+                <h4 className="text-2xl font-bold mb-2 text-[#1C1917]">{project.name}</h4>
+                <p className="text-stone-600 mb-6 text-sm leading-relaxed">{project.desc}</p>
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-stone-200">
                   {project.stack.map((item, idx) => (
-                    <span key={idx} className="text-xs font-bold uppercase tracking-wider bg-white border border-gray-200 px-3 py-1 rounded-full text-gray-800">
+                    <span key={idx} className="text-xs font-bold uppercase tracking-wider bg-white border border-stone-200 px-3 py-1 rounded-full text-stone-800">
                       {item}
                     </span>
                   ))}
@@ -903,7 +778,7 @@ export default function App() {
 
           {/* In Development Prototypes */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Prototypes & Concepts in Development</h3>
+            <h3 className="text-2xl font-bold mb-6 text-[#1C1917]">Prototypes & Concepts in Development</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
               {UNPUBLISHED_PROJECTS.map((project) => (
                 <div 
@@ -918,7 +793,7 @@ export default function App() {
                     referrerPolicy="no-referrer" 
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-4 text-center">
-                    <Plus className="text-[#966F33] mb-2" size={32} />
+                    <Plus className="text-[#E07A5F] mb-2" size={32} />
                     <p className="text-white text-xs font-bold uppercase tracking-widest">{project.name}</p>
                   </div>
                 </div>
@@ -929,17 +804,17 @@ export default function App() {
       </section>
 
       {/* Skills & Capabilities Section */}
-      <section id="skills" className="py-24 md:py-32 px-6 md:px-20 bg-white border-t border-gray-100">
+      <section id="skills" className="py-24 md:py-32 px-6 md:px-20 bg-white border-t border-stone-100">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center space-x-4 mb-4">
-            <div className="h-[1px] w-12 bg-[#966F33]" />
-            <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">Capabilities</span>
+            <div className="h-[1px] w-12 bg-[#6B1D2F]" />
+            <span className="text-[#8C2D40] font-bold uppercase tracking-widest text-lg">Capabilities</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-black">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-[#1C1917]">
             Skills & Technical Mastery
           </h2>
-          <p className="text-gray-600 text-lg mb-12 max-w-2xl">
+          <p className="text-stone-600 text-lg mb-12 max-w-2xl">
             Interactive view of soft skills and full-stack technical competencies.
           </p>
 
@@ -947,13 +822,13 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mb-20">
             {/* Soft Skills Column (Left Edge) */}
             <div className="flex flex-col">
-              <div className="flex items-center space-x-3 mb-4 pb-3 border-b border-gray-100">
-                <div className="w-10 h-10 rounded-xl bg-[#966F33]/10 flex items-center justify-center text-[#966F33]">
+              <div className="flex items-center space-x-3 mb-4 pb-3 border-b border-stone-100">
+                <div className="w-10 h-10 rounded-xl bg-[#6B1D2F]/10 flex items-center justify-center text-[#8C2D40]">
                   <User size={22} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-black">Soft Skills</h3>
-                  <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Scroll or drag left wheel</p>
+                  <h3 className="text-2xl font-bold text-[#1C1917]">Soft Skills</h3>
+                  <p className="text-xs text-stone-500 font-medium uppercase tracking-wider">Scroll/drag to view</p>
                 </div>
               </div>
 
@@ -966,18 +841,18 @@ export default function App() {
                     'Technical Leadership',
                     'Effective Communication',
                     'Problem Solving',
-                    'Agile Collaboration',
+                    'Creative Thinking',
                     'System Design Mindset',
                     'Critical Analysis',
                     'Client Alignment',
-                    'Adaptability & Velocity'
+                    'Adaptability'
                   ]}
                   defaultSelected={2}
                   textColor="#71717a"
                   activeColor="#000000"
                   side="left"
-                  fontSize={1.6}
-                  spacing={1.8}
+                  fontSize={2.2}
+                  spacing={1.6}
                   curve={1.2}
                   tilt={7}
                   blur={2.5}
@@ -992,13 +867,13 @@ export default function App() {
 
             {/* Technical Skills Column (Right Edge) */}
             <div className="flex flex-col">
-              <div className="flex items-center space-x-3 mb-4 pb-3 border-b border-gray-100 md:justify-end">
-                <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-800">
+              <div className="flex items-center space-x-3 mb-4 pb-3 border-b border-stone-100 md:justify-end">
+                <div className="w-10 h-10 rounded-xl bg-stone-100 flex items-center justify-center text-stone-800">
                   <Code2 size={22} />
                 </div>
                 <div className="md:text-right">
-                  <h3 className="text-2xl font-bold text-black">Technical Skills</h3>
-                  <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Scroll or drag right wheel</p>
+                  <h3 className="text-2xl font-bold text-[#1C1917]">Technical Skills</h3>
+                  <p className="text-xs text-stone-500 font-medium uppercase tracking-wider">Scroll/drag to view</p>
                 </div>
               </div>
 
@@ -1006,24 +881,24 @@ export default function App() {
               <div className="h-[380px] sm:h-[420px] md:h-[480px] w-full relative bg-transparent overflow-hidden">
                 <OptionWheel
                   items={[
-                    'JavaScript (ES6+)',
+                    'JavaScript',
                     'TypeScript',
-                    'React.js & Hooks',
+                    'React.js',
                     'Node.js & Express',
-                    'MongoDB & Mongoose',
                     'TailwindCSS',
+                    'System Design',
                     'REST & GraphQL APIs',
                     'Next.js',
-                    'Firebase & Auth',
+                    'Firebase & Supabase',
                     'GSAP & Motion',
-                    'Git & CI/CD Pipelines'
+                    'Git & Github'
                   ]}
                   defaultSelected={2}
                   textColor="#71717a"
                   activeColor="#000000"
                   side="right"
-                  fontSize={1.6}
-                  spacing={1.8}
+                  fontSize={2.2}
+                  spacing={1.6}
                   curve={1.2}
                   tilt={7}
                   blur={2.5}
@@ -1038,12 +913,12 @@ export default function App() {
           </div>
 
           {/* AI-Accelerated Workflow Section (Placed after skills lists) */}
-          <div className="pt-12 border-t border-gray-200">
+          <div className="pt-12 border-t border-stone-200">
             <div className="flex items-center space-x-4 mb-4">
-              <Zap className="text-[#966F33]" size={32} />
-              <h3 className="text-3xl font-bold text-black">AI-Accelerated Workflow</h3>
+              <Zap className="text-[#E07A5F]" size={32} />
+              <h3 className="text-3xl font-bold text-[#1C1917]">AI-Accelerated Workflow</h3>
             </div>
-            <p className="text-gray-600 text-base md:text-lg mb-10 max-w-3xl leading-relaxed">
+            <p className="text-stone-600 text-base md:text-lg mb-10 max-w-3xl leading-relaxed">
               How I leverage AI tooling to multiply engineering velocity while maintaining rigorous manual oversight, architectural safety, and production reliability.
             </p>
 
@@ -1054,12 +929,12 @@ export default function App() {
                 { title: "API Integration & Logic", desc: "Wiring backend routes, database models, and external integrations." },
                 { title: "Continuous Delivery", desc: "Debugging build errors instantly and deploying production builds." }
               ].map((item, idx) => (
-                <div key={idx} className="bg-[#FDFBF7] p-6 rounded-2xl border border-gray-200/80 hover:border-[#966F33]/40 transition-all shadow-sm">
-                  <div className="w-10 h-10 rounded-xl bg-[#966F33]/10 text-[#966F33] flex items-center justify-center font-bold text-sm mb-4">
+                <div key={idx} className="bg-[#FDFBF7] p-6 rounded-2xl border border-stone-200/80 hover:border-[#6B1D2F]/40 transition-all shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#6B1D2F]/10 text-[#8C2D40] flex items-center justify-center font-bold text-sm mb-4">
                     0{idx + 1}
                   </div>
-                  <h4 className="font-bold text-black text-base mb-2">{item.title}</h4>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                  <h4 className="font-bold text-[#1C1917] text-base mb-2">{item.title}</h4>
+                  <p className="text-xs text-stone-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -1068,19 +943,19 @@ export default function App() {
       </section>
 
       {/* Certifications & Credentials */}
-      <section id="education" className="py-24 bg-white border-t border-gray-100 overflow-hidden">
+      <section id="education" className="py-24 bg-white border-t border-stone-100 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 md:px-20 mb-6">
           <div className="flex items-center space-x-4 mb-3">
-            <div className="h-[1px] w-12 bg-[#966F33]" />
-            <span className="text-[#966F33] font-bold uppercase tracking-widest text-lg">Certifications & Credentials</span>
+            <div className="h-[1px] w-12 bg-[#6B1D2F]" />
+            <span className="text-[#8C2D40] font-bold uppercase tracking-widest text-lg">Certifications & Credentials</span>
           </div>
-          <p className="text-gray-600 text-base md:text-lg font-medium pl-16">
+          <p className="text-stone-600 text-base md:text-lg font-medium pl-16">
             You can verify these credentials via my{" "}
             <a 
               href="https://www.linkedin.com/in/sakshi-8b17732b4?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-[#966F33] font-semibold underline underline-offset-4 hover:text-black transition-colors inline-flex items-center gap-1"
+              className="text-[#8C2D40] font-semibold underline underline-offset-4 hover:text-[#1C1917] transition-colors inline-flex items-center gap-1"
             >
               LinkedIn Profile <ExternalLink size={15} />
             </a>
@@ -1114,20 +989,20 @@ export default function App() {
                 ].map((cert, i) => (
                   <div 
                     key={i} 
-                    className="w-[280px] sm:w-[350px] md:w-[380px] bg-[#FDFBF7] p-6 md:p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#966F33]/40 transition-all flex flex-col justify-between shrink-0 group whitespace-normal text-left"
+                    className="w-[280px] sm:w-[350px] md:w-[380px] bg-[#FDFBF7] p-6 md:p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-[#6B1D2F]/40 transition-all flex flex-col justify-between shrink-0 group whitespace-normal text-left"
                   >
                     <div>
                       <div className="flex items-center justify-between mb-5">
-                        <div className="p-3 bg-[#966F33]/10 text-[#966F33] rounded-2xl group-hover:bg-[#966F33] group-hover:text-white transition-colors">
+                        <div className="p-3 bg-[#6B1D2F]/10 text-[#8C2D40] rounded-2xl group-hover:bg-[#6B1D2F] group-hover:text-white transition-colors">
                           <Award size={24} />
                         </div>
                       </div>
 
-                      <h3 className="text-lg md:text-xl font-bold text-black mb-3 leading-snug">
+                      <h3 className="text-lg md:text-xl font-bold text-[#1C1917] mb-3 leading-snug">
                         {cert.title}
                       </h3>
 
-                      <p className="text-gray-600 leading-relaxed font-medium text-xs md:text-sm">
+                      <p className="text-stone-600 leading-relaxed font-medium text-xs md:text-sm">
                         {cert.desc}
                       </p>
                     </div>
@@ -1137,23 +1012,21 @@ export default function App() {
             ]}
           />
         </div>
-
-
       </section>
 
       {/* Footer / CTA Section */}
-      <footer id="contact" className="bg-[#1A1A1A] text-white pt-28 pb-12 px-6 md:px-20">
+      <footer id="contact" className="bg-[#1C1917] text-white pt-28 pb-12 px-6 md:px-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 mb-16">
             <div>
-              <div className="inline-flex items-center space-x-2 text-[#966F33] mb-4">
+              <div className="inline-flex items-center space-x-2 text-[#E07A5F] mb-4">
                 <Zap size={20} />
                 <span className="text-xs font-bold uppercase tracking-widest">Ready to Ship ? </span>
               </div>
               <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-none">
-                Let's work <br /> <span className="text-[#966F33]">together.</span>
+                Let's work <br /> <span className="text-[#E07A5F]">together.</span>
               </h2>
-              <p className="text-gray-400 text-lg mb-8 max-w-md">
+              <p className="text-stone-400 text-lg mb-8 max-w-md">
                 Are you a Tech Lead looking for a developer who can pick up feature requests and ship them immediately? Let's connect directly.
               </p>
 
@@ -1162,11 +1035,11 @@ export default function App() {
                   onClick={() => setShowInviteModal(true)}
                   size="lg"
                   radius={9999}
-                  tint="#966F33"
+                  tint="#8C2D40"
                   tintOpacity={1}
                   textColor="#ffffff"
                   lineColor="#ffffff"
-                  baseColor="#725324"
+                  baseColor="#581C24"
                   intensity={1.2}
                   className="font-bold text-sm shadow-xl"
                 >
@@ -1188,7 +1061,7 @@ export default function App() {
                   href="https://www.linkedin.com/in/sakshi-8b17732b4?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-white/10 rounded-full hover:bg-[#966F33] transition-all"
+                  className="p-4 bg-white/10 rounded-full hover:bg-[#6B1D2F] transition-all"
                   aria-label="LinkedIn Profile"
                 >
                   <Linkedin size={24} />
@@ -1196,14 +1069,14 @@ export default function App() {
               </div>
 
               <div className="text-left md:text-right space-y-1">
-                <p className="text-gray-400 text-sm font-medium">Sakshi</p>
-                <p className="text-gray-500 text-xs tracking-widest uppercase">Full-Stack Developer</p>
-                <p className="text-gray-500 text-xs tracking-widest uppercase">Faridabad, Haryana, India</p>
+                <p className="text-stone-300 text-sm font-medium">Sakshi</p>
+                <p className="text-stone-500 text-xs tracking-widest uppercase">Full-Stack Developer</p>
+                <p className="text-stone-500 text-xs tracking-widest uppercase">Faridabad, Haryana, India</p>
               </div>
             </div>
           </div>
           
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs">
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-stone-500 text-xs">
             <p>© {new Date().getFullYear()} Sakshi Jangid. Built for high-velocity shipping.</p>
             <p className="mt-2 md:mt-0">Proving one thing: Full-stack feature delivery at startup speed.</p>
           </div>
@@ -1213,7 +1086,7 @@ export default function App() {
       {/* Back to Top Button */}
       <button 
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 p-4 bg-[#966F33] text-white rounded-full shadow-2xl hover:scale-110 transition-all z-40"
+        className="fixed bottom-8 right-8 p-4 bg-[#6B1D2F] text-white rounded-full shadow-2xl hover:scale-110 transition-all z-40"
         aria-label="Back to Top"
       >
         <ChevronUp size={22} />
