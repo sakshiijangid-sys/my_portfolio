@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 import heroVideoSrc from './assets/VIDEO_a22b7f24-5e95-49d7-969b-f7b756f1c4bd.mp4';
+import footerBackground from './assets/Gemini_Generated_Image_uswi6luswi6luswi.png';
 import React, { useEffect, useRef, useState } from "react";
 import TrueFocus from "./components/TrueFocus";
 import GradualBlur from "./components/GradualBlur";
@@ -1080,7 +1081,7 @@ export default function App() {
         id="contact" 
         className="bg-[#120E10] text-white pt-40 sm:pt-48 md:pt-56 pb-12 px-6 md:px-20 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/src/assets/Gemini_Generated_Image_uswi6luswi6luswi.png)',
+          backgroundImage: `url(${footerBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
