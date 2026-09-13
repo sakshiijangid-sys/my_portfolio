@@ -218,10 +218,25 @@ export const OptionWheel: React.FC<OptionWheelProps> = ({
     if (!el) return;
 
     const onWheel = (e: WheelEvent) => {
-      e.preventDefault();
       const cfg = cfgRef.current;
       const step = e.deltaMode === 1 ? e.deltaY * 0.5 : e.deltaY / (cfg.rowH * 1.2);
-      applyTarget(targetRef.current + step, false);
+      const currentPos = targetRef.current;
+      const isAtTop = currentPos <= 0.05;
+      const isAtBottom = currentPos >= cfg.count - 1 - 0.05;
+
+      if (!cfg.loop) {
+        if (isAtTop && e.deltaY < 0) {
+          // At top of list and scrolling up -> allow window page to scroll up
+          return;
+        }
+        if (isAtBottom && e.deltaY > 0) {
+          // At bottom of list and scrolling down -> allow window page to scroll down
+          return;
+        }
+      }
+
+      e.preventDefault();
+      applyTarget(currentPos + step, false);
 
       if (wheelTimerRef.current) clearTimeout(wheelTimerRef.current);
       wheelTimerRef.current = setTimeout(() => {

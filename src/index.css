@@ -1,5 +1,63 @@
 @import "tailwindcss";
 
+/* 1. Reset defaults & style the hero container */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents video overflow from causing scrollbars */
+  background-color: #000; /* Fallback color while video loads */
+}
+
+/* 2. Position the video to fill the background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 1; /* Keeps it behind the content */
+}
+
+@media (max-width: 1024px) {
+  .hero-video {
+    object-position: 76% 32%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-video {
+    object-position: 88% 32%;
+  }
+}
+
+/* Global Light Burgundy Text Highlight */
+::selection {
+  background-color: #C0425E !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background-color: #C0425E !important;
+  color: #ffffff !important;
+}
+
+*::selection {
+  background-color: #C0425E !important;
+  color: #ffffff !important;
+}
+
+*::-moz-selection {
+  background-color: #C0425E !important;
+  color: #ffffff !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -58,4 +116,164 @@
     0% { bottom: 100%; }
     100% { bottom: -100px; }
   }
+
+  /* Uiverse loud-frog-61 3D Flip Card Animation */
+  .flip-card-container {
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.is-flipped {
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
+  /* Uiverse giant-owl-78 Overlapping Stacked Cards (Light Burgundy Palette & Vertical Mobile Responsive) */
+  .giant-owl-container {
+    display: flex;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    padding-left: 10px;
+    padding-right: 90px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    perspective: 1000px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .giant-owl-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .giant-owl-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 220px;
+    width: 240px;
+    flex-shrink: 0;
+    background-color: #FAF5F6;
+    border-radius: 14px;
+    box-shadow: -1rem 0 2.5rem rgba(107, 29, 47, 0.1);
+    margin-left: -50px;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 24px 22px;
+    border: 1px solid rgba(107, 29, 47, 0.15);
+  }
+
+  .giant-owl-card:first-child {
+    margin-left: 0px;
+  }
+
+  .giant-owl-card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+    text-shadow: 0px 2px 8px rgba(107, 29, 47, 0.15);
+    border-color: rgba(107, 29, 47, 0.4);
+    box-shadow: -0.5rem 1rem 3rem rgba(107, 29, 47, 0.22), 0 0 20px rgba(107, 29, 47, 0.15);
+    z-index: 20;
+    background-color: #FFFFFF;
+  }
+
+  .giant-owl-card:hover ~ .giant-owl-card {
+    position: relative;
+    left: 50px;
+    transform: rotateX(-15deg) rotateY(10deg);
+    transition: 0.4s ease-out;
+  }
+
+  .giant-owl-card .title-1 {
+    color: #3B0E17;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .giant-owl-card .content {
+    color: #593640;
+    font-size: 0.825rem;
+    line-height: 1.55;
+  }
+
+  /* Vertical stacking effect on mobile devices */
+  @media (max-width: 640px) {
+    .giant-owl-container {
+      flex-direction: column;
+      align-items: stretch;
+      padding-right: 0px;
+      padding-left: 0px;
+      padding-top: 1rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .giant-owl-card {
+      width: 100%;
+      height: auto;
+      min-height: 220px;
+      margin-left: 0px;
+      margin-top: -35px;
+      box-shadow: 0 -0.5rem 1.5rem rgba(107, 29, 47, 0.08);
+    }
+
+    .giant-owl-card:first-child {
+      margin-top: 0px;
+    }
+
+    .giant-owl-card:hover {
+      transform: translateY(-16px);
+    }
+
+    .giant-owl-card:hover ~ .giant-owl-card {
+      left: 0px;
+      top: 40px;
+      transform: rotateX(10deg);
+    }
+  }
+
+  /* Custom Image Hover Effect */
+  .prototype-hover-img {
+    --b: 4px;
+    --g: 3px;
+    --c: #8C2D40;
+
+    aspect-ratio: 1;
+    outline: 100px solid rgba(15, 23, 42, 0.2);
+    outline-offset: -100px;
+    cursor: pointer;
+    transition: outline 0.3s ease, outline-offset 0.3s ease;
+  }
+
+  .prototype-hover-img:hover,
+  .group:hover .prototype-hover-img {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+  }
 }
+
